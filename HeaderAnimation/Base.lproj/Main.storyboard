@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HeaderAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Bk-DA-LUV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE6-wF-eaW">
+                                        <rect key="frame" x="333" y="36" width="34" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="N0j-9L-r4n"/>
+                                            <constraint firstAttribute="width" constant="34" id="Pvc-fD-1ze"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <state key="normal" title="＋">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FpI-OO-VzO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NE6-wF-eaW" secondAttribute="trailing" constant="8" id="6Bl-eq-0s7"/>
+                                    <constraint firstItem="NE6-wF-eaW" firstAttribute="top" secondItem="6Bk-DA-LUV" secondAttribute="top" constant="36" id="ktu-rM-Sji"/>
+                                    <constraint firstAttribute="height" constant="88" id="xID-pO-l5N"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VaM-jy-45K">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="t4p-tC-PZ3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4p-tC-PZ3" id="RWW-2Y-i28">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VaM-jy-45K" firstAttribute="top" secondItem="6Bk-DA-LUV" secondAttribute="bottom" id="20E-3S-2nO"/>
+                            <constraint firstItem="6Bk-DA-LUV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6jd-xs-RJF"/>
+                            <constraint firstAttribute="bottom" secondItem="VaM-jy-45K" secondAttribute="bottom" id="Bqp-2U-SdG"/>
+                            <constraint firstItem="VaM-jy-45K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dl0-Cm-buI"/>
+                            <constraint firstItem="6Bk-DA-LUV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gBf-Hu-lEh"/>
+                            <constraint firstItem="6Bk-DA-LUV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h8h-B3-IV7"/>
+                            <constraint firstItem="VaM-jy-45K" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="u1S-ym-Shh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="NE6-wF-eaW" id="fI0-h9-WOW"/>
+                        <outlet property="navBarHeightConstraint" destination="xID-pO-l5N" id="CEK-23-ELd"/>
+                        <outlet property="navBarView" destination="6Bk-DA-LUV" id="bkn-Gx-lej"/>
+                        <outlet property="tableView" destination="VaM-jy-45K" id="ERM-Lx-nwg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+</document>
